@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>The Matrix</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css" >
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                The Matrix
+            </div>
+        </div>
+        <div class="window-body">
+            <header>
+                <div class="window">
+                    <div class="tab-container">
+                        <a href="index.html" class="tab">Home</a>
+                        <a href="lista-film.html" class="tab">Lista Film</a>
+                        <a href="login.html" class="tab">Login/Registrazione</a>
+                    </div>
+                </div>
+            </header>
+            <div class="film-container">
+                <div class="film-poster">
+                    <img src="poster/poster5.jpg" alt="The Matrix" >
+                </div>
+                <div class="film-info">
+                    <h2>The Matrix</h2>
+                    <p><strong>Trama:</strong> Grazie a misteriosi ribelli, un hacker scopre la vera natura della sua realtà e il suo ruolo nella guerra contro i suoi controllori.</p>
+                    <p><strong>Regista:</strong> Lana Wachowski, Lilly Wachowski</p>
+                    <p><strong>Anno di uscita:</strong> 1999</p>
+                    <p><strong>Durata:</strong> 136 minuti</p>
+                    <p><strong>Cast principale:</strong></p>
+                    <ul>
+                        <li>Keanu Reeves</li>
+                        <li>Laurence Fishburne</li>
+                        <li>Carrie-Anne Moss</li>
+                        <li>Hugo Weaving</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="window-body">
+                <!-- Form per aggiungere una recensione -->
+                <div class="window" style="margin-bottom: 20px;">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Scrivi una Recensione</div>
+                    </div>
+                    <div class="window-body">
+                        <form action="#" method="POST">
+                            <select>
+                                <option>5 - Incredible!</option>
+                                <option>4 - Great!</option>
+                                <option>3 - Pretty good</option>
+                                <option>2 - Not so great</option>
+                                <option>1 - Unfortunate</option>
+                            </select>
+                            <div class="field-row-stacked" style="margin-top: 10px;">
+                                <label for="review">Testo:</label>
+                                <textarea id="review" name="review" rows="4" required class="textarea-win98"></textarea>
+                            </div>
+                            <button type="submit" class="button" style="margin-top: 10px;">Invia</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Lista delle recensioni esistenti -->
+                <div class="window">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Recensioni degli Utenti</div>
+                    </div>
+                    <div class="window-body">
+                        <div class="review-box">
+                            <p><strong>CyberPunk99</strong> - ⭐⭐⭐⭐⭐ (5/5)</p>
+                            <p>"I Wachowski hanno cambiato per sempre il cinema con quel bullet time! Reeves è nato per il ruolo di Neo. La scena del doppio salto con Morpheus? Ancora oggi mi chiedo: 'Come hanno fatto nel '99?'. La pillola rossa per sempre!"</p>
+                        </div>
+                        <div class="review-box" style="margin-top: 10px;">
+                            <p><strong>AnalogSoul</strong> - ⭐⭐⭐ (3/5)</p>
+                            <p>"Effetti speciali strabilianti (specie lo slow-mo dei proiettili), ma la filosofia è un po' pretestuosa. Fishburne domina ogni scena. Il combattimento nel dojo? Iconico, ma i dialoghi su 'destino' e 'scelta' suonano naif oggi."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
