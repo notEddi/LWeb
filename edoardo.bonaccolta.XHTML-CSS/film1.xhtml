@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Pulp Fiction</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/98.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+
+    <body>
+
+        <div class="window">
+
+            <div class="title-bar">
+                <div class="title-bar-text">Pulp Fiction</div>
+            </div>
+
+            <div class="window-body">
+
+                <div class="header">
+                    <div class="window">
+                        <div class="tab-container">
+                            <a href="index.xhtml" class="tab">Home</a>
+                            <a href="listaFilm.xhtml" class="tab">Lista Film</a>
+                            <a href="login.xhtml" class="tab">Login/Registrazione</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="film-container">
+
+                    <div class="film-poster">
+                        <img src="poster/poster1.jpg" alt="Pulp Fiction" />
+                    </div>
+
+                    <div class="film-info">
+                        <h2>Pulp Fiction</h2>
+
+                        <p><strong>Trama:</strong> Le vicende di due sicari della mafia, un pugile, la moglie di un gangster e due banditi di diner si intrecciano in quattro storie di violenza e redenzione.</p>
+
+                        <p><strong>Regista:</strong> Quentin Tarantino</p>
+                        <p><strong>Anno di uscita:</strong> 1994</p>
+                        <p><strong>Durata:</strong> 154 minuti</p>
+
+                        <p><strong>Cast principale:</strong></p>
+
+                        <ul>
+                            <li>John Travolta</li>
+                            <li>Uma Thurman</li>
+                            <li>Samuel L. Jackson</li>
+                            <li>Bruce Willis</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="window-body">
+
+                    <!-- FORM RECENSIONE -->
+                    <div class="window" style="margin-bottom: 20px;">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Scrivi una Recensione</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <form action="#" method="post">
+
+                                <p>
+                                    <label for="rating">Valutazione:</label><br />
+                                    <select id="rating" name="rating">
+                                        <option value="5">5 - Incredible!</option>
+                                        <option value="4">4 - Great!</option>
+                                        <option value="3">3 - Pretty good</option>
+                                        <option value="2">2 - Not so great</option>
+                                        <option value="1">1 - Unfortunate</option>
+                                    </select>
+                                </p>
+
+                                <p>
+                                    <label for="review">Testo:</label><br />
+                                    <textarea id="review" name="review" rows="4" cols="40" class="textarea-adapt textarea-win98"></textarea>
+                                </p>
+
+
+                                <p>
+                                    <button type="submit" class="button">Invia</button>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- RECENSIONI UTENTI -->
+                    <div class="window">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Recensioni degli Utenti</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <div class="review-box">
+                                <p><strong>Utente Anonimo</strong> - ★★★★★ (5/5)</p>
+                                <p>"Un capolavoro senza tempo! Tarantino al suo meglio."</p>
+                            </div>
+
+                            <div class="review-box" style="margin-top: 10px;">
+                                <p><strong>CinemaLover</strong> - ★★★★☆ (4/5)</p>
+                                <p>"Grande film, ma alcune scene potrebbero essere troppo intense per alcuni."</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

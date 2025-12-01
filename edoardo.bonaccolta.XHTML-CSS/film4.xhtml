@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Oppenheimer</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/98.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <div class="window">
+
+            <div class="title-bar">
+                <div class="title-bar-text">Oppenheimer</div>
+            </div>
+
+            <div class="window-body">
+
+                <!-- MENU -->
+                <div class="header">
+                    <div class="window">
+                        <div class="tab-container">
+                            <a href="index.xhtml" class="tab">Home</a>
+                            <a href="listaFilm.xhtml" class="tab">Lista Film</a>
+                            <a href="login.xhtml" class="tab">Login/Registrazione</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFO FILM -->
+                <div class="film-container">
+
+                    <div class="film-poster">
+                        <img src="poster/poster4.jpg" alt="Oppenheimer" />
+                    </div>
+
+                    <div class="film-info">
+                        <h2>Oppenheimer</h2>
+
+                        <p><strong>Trama:</strong> La storia dello scienziato americano J. Robert Oppenheimer e del suo ruolo nello sviluppo della bomba atomica.</p>
+
+                        <p><strong>Regista:</strong> Christopher Nolan</p>
+                        <p><strong>Anno di uscita:</strong> 2023</p>
+                        <p><strong>Durata:</strong> 181 minuti</p>
+
+                        <p><strong>Cast principale:</strong></p>
+
+                        <ul>
+                            <li>Cillian Murphy</li>
+                            <li>Emily Blunt</li>
+                            <li>Matt Damon</li>
+                            <li>Robert Downey Jr.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- FORM RECENSIONE -->
+                <div class="window-body">
+
+                    <div class="window" style="margin-bottom: 20px;">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Scrivi una Recensione</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <form action="#" method="post">
+
+                                <p>
+                                    <label for="rating">Valutazione:</label><br />
+                                    <select id="rating" name="rating">
+                                        <option value="5">5 - Incredible!</option>
+                                        <option value="4">4 - Great!</option>
+                                        <option value="3">3 - Pretty good</option>
+                                        <option value="2">2 - Not so great</option>
+                                        <option value="1">1 - Unfortunate</option>
+                                    </select>
+                                </p>
+
+                                <p>
+                                    <label for="review">Testo:</label><br />
+                                    <textarea id="review" name="review" rows="4" cols="50" class="textarea-adapt textarea-win98"></textarea>
+                                </p>
+
+                                <p>
+                                    <button type="submit" class="button margin-top-10">Invia</button>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- RECENSIONI -->
+                    <div class="window">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Recensioni degli Utenti</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <div class="review-box">
+                                <p><strong>HistoryBuff</strong> - ★★★★★ (5/5)</p>
+                                <p>"Nolan fa tremare lo schermo con la potenza di un test nucleare. Cillian Murphy dà vita a un Oppenheimer tormentato e magnetico. La sequenza del Trinity Trial? Ho smesso di respirare per 10 minuti!"</p>
+                            </div>
+
+                            <div class="review-box" style="margin-top: 10px;">
+                                <p><strong>ClassicFilmFan</strong> - ★★★★☆ (4/5)</p>
+                                <p>"Fotografia e colonna sonora sono da Oscar, ma i dialoghi politici a volte appesantiscono il ritmo. Downey Jr. sorprende come Strauss. La scena dell'applauso dopo Hiroshima? Agghiacciante e indimenticabile."</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

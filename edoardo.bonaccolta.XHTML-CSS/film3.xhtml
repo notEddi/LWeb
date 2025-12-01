@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Memories of Murder</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/98.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <div class="window">
+
+            <div class="title-bar">
+                <div class="title-bar-text">Memories of Murder</div>
+            </div>
+
+            <div class="window-body">
+
+                <!-- Menu -->
+                <div class="header">
+                    <div class="window">
+                        <div class="tab-container">
+                            <a href="index.xhtml" class="tab">Home</a>
+                            <a href="listaFilm.xhtml" class="tab">Lista Film</a>
+                            <a href="login.xhtml" class="tab">Login/Registrazione</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFO FILM -->
+                <div class="film-container">
+
+                    <div class="film-poster">
+                        <img src="poster/poster3.jpg" alt="Memories of Murder" />
+                    </div>
+
+                    <div class="film-info">
+                        <h2>Memories of Murder</h2>
+
+                        <p><strong>Trama:</strong> Nel 1986 in una piccola provincia coreana, tre investigatori lavorano sul caso di diverse donne vittime di stupro e omicidio da un colpevole sconosciuto.</p>
+
+                        <p><strong>Regista:</strong> Bong Joon Ho</p>
+                        <p><strong>Anno di uscita:</strong> 2003</p>
+                        <p><strong>Durata:</strong> 131 minuti</p>
+
+                        <p><strong>Cast principale:</strong></p>
+
+                        <ul>
+                            <li>Song Kang-ho</li>
+                            <li>Kim Sang-kyung</li>
+                            <li>Kim Roi-ha</li>
+                            <li>Song Jae-ho</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- FORM RECENSIONE -->
+                <div class="window-body">
+
+                    <div class="window" style="margin-bottom: 20px;">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Scrivi una Recensione</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <form action="#" method="post">
+
+                                <p>
+                                    <label for="rating">Valutazione:</label><br />
+                                    <select id="rating" name="rating">
+                                        <option value="5">5 - Incredible!</option>
+                                        <option value="4">4 - Great!</option>
+                                        <option value="3">3 - Pretty good</option>
+                                        <option value="2">2 - Not so great</option>
+                                        <option value="1">1 - Unfortunate</option>
+                                    </select>
+                                </p>
+
+                                <p>
+                                    <label for="review">Testo:</label><br />
+                                    <textarea id="review" name="review" rows="4" cols="50" class="textarea-win98 textarea-adapt"></textarea>
+                                </p>
+
+                                <p>
+                                    <button type="submit" class="button margin-top-10">Invia</button>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- RECENSIONI -->
+                    <div class="window">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Recensioni degli Utenti</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <div class="review-box">
+                                <p><strong>KinoLover</strong> - ★★★★★ (5/5)</p>
+                                <p>"Bong Joon-ho mescola giallo e dramma sociale con maestria. Song Kang-ho è sublime come detective frustrato. Quella scena finale nello campo di grano? Ti rimane nell'anima per giorni. Più crudele di un vero cold case!"</p>
+                            </div>
+
+                            <div class="review-box" style="margin-top: 10px;">
+                                <p><strong>NoirFan</strong> - ★★★★☆ (4/5)</p>
+                                <p>"Il ritmo è volutamente claudicante come l'indagine, ma alcuni passaggi risultano dispersivi. La ricostruzione degli anni '80 coreani è perfetta. Il momento del tunnel con la lucciola è pura poesia nera."</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

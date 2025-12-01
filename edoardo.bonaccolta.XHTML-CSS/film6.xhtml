@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>The Fly</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/98.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <div class="window">
+
+            <div class="title-bar">
+                <div class="title-bar-text">The Fly</div>
+            </div>
+
+            <div class="window-body">
+
+                <!-- MENU -->
+                <div class="header">
+                    <div class="window">
+                        <div class="tab-container">
+                            <a href="index.xhtml" class="tab">Home</a>
+                            <a href="listaFilm.xhtml" class="tab">Lista Film</a>
+                            <a href="login.xhtml" class="tab">Login/Registrazione</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFO FILM -->
+                <div class="film-container">
+
+                    <div class="film-poster">
+                        <img src="poster/poster6.jpg" alt="The Fly" />
+                    </div>
+
+                    <div class="film-info">
+                        <h2>The Fly</h2>
+
+                        <p><strong>Trama:</strong> Uno scienziato brillante ed eccentrico comincia a trasformarsi in una mostruosa creatura metà uomo e metà mosca dopo che uno dei suoi esperimenti è andato storto.</p>
+
+                        <p><strong>Regista:</strong> David Cronenberg</p>
+                        <p><strong>Anno di uscita:</strong> 1986</p>
+                        <p><strong>Durata:</strong> 96 minuti</p>
+
+                        <p><strong>Cast principale:</strong></p>
+
+                        <ul>
+                            <li>Jeff Goldblum</li>
+                            <li>Geena Davis</li>
+                            <li>John Getz</li>
+                            <li>Joy Boushel</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- FORM RECENSIONE -->
+                <div class="window-body">
+
+                    <div class="window" style="margin-bottom: 20px;">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Scrivi una Recensione</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <form action="#" method="post">
+
+                                <p>
+                                    <label for="rating">Valutazione:</label><br />
+                                    <select id="rating" name="rating">
+                                        <option value="5">5 - Incredible!</option>
+                                        <option value="4">4 - Great!</option>
+                                        <option value="3">3 - Pretty good</option>
+                                        <option value="2">2 - Not so great</option>
+                                        <option value="1">1 - Unfortunate</option>
+                                    </select>
+                                </p>
+
+                                <p>
+                                    <label for="review">Testo:</label><br />
+                                    <textarea id="review" name="review" rows="4" cols="50" class="textarea-win98 textarea-adapt"></textarea>
+                                </p>
+
+                                <p>
+                                    <button type="submit" class="button margin-top-10">Invia</button>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- RECENSIONI -->
+                    <div class="window">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Recensioni degli Utenti</div>
+                        </div>
+
+                        <div class="window-body">
+
+                            <div class="review-box">
+                                <p><strong>SciFiHorrorFan</strong> - ★★★★★ (5/5)</p>
+                                <p>"Cronenberg ha creato un capolavoro disgustoso e commovente. Goldblum è fenomeno come il dottore che diventa mosca - quella scena del vomito acido mi ha fatto urlare! Gli effetti pratici della trasformazione? Avanti anni luce rispetto ai CGI di oggi. La scena finale con la pistola... tragica e perfetta."</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

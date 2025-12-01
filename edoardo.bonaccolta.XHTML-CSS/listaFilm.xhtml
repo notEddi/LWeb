@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Lista Film - Recensioni Cinematografiche</title>
+        <link rel="stylesheet" href="https://unpkg.com/98.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+
+    <body>
+        <div class="window">
+            <!-- Barra del titolo -->
+            <div class="title-bar">
+                <div class="title-bar-text">Recensioni Cinematografiche</div>
+            </div>
+            <div class="window-body">
+                <div class="header">
+                    <div class="window">
+                        <div class="tab-container">
+
+                            <!-- Collegamenti alle altre sezioni del sito -->
+                            <a href="index.xhtml" class="tab">Home</a>
+                            <a href="listaFilm.xhtml" class="tab">Lista Film</a>
+                            <a href="login.xhtml" class="tab">Login/Registrazione</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEZIONE CONTENENTE LA LISTA DEI FILM -->
+                <div id="film-list">
+                    <h2>Lista Film</h2>
+                    <!--
+                        Griglia dei film.
+                        Ogni film è un <li> contenente immagine + titolo,
+                        il tutto racchiuso in un link verso la pagina del film.
+                    -->
+                    <ul class="film-grid">
+
+                        <li class="film" onclick="window.location.href='film1.xhtml'" style="cursor:pointer;">
+                            <img src="poster/poster1.jpg" alt="Pulp Fiction" />
+                            <h4>Pulp Fiction</h4>
+                        </li>
+
+                        <li class="film" onclick="window.location.href='film2.xhtml'" style="cursor:pointer;">
+                            <img src="poster/poster2.jpg" alt="Seven" />
+                            <h4>Seven</h4>
+                        </li>
+
+                        <li class="film" onclick="window.location.href='film3.xhtml'" style="cursor:pointer;">
+                            <img src="poster/poster3.jpg" alt="Memories of Murder" />
+                            <h4>Memories of Murder</h4>
+                        </li>
+
+                        <li class="film" onclick="window.location.href='film4.xhtml'" style="cursor:pointer;">
+                            <img src="poster/poster4.jpg" alt="Oppenheimer" />
+                            <h4>Oppenheimer</h4>
+                        </li>
+
+                        <li class="film" onclick="window.location.href='film5.xhtml'" style="cursor:pointer;">
+                            <img src="poster/poster5.jpg" alt="The Matrix" />
+                            <h4>The Matrix</h4>
+                        </li>
+
+                        <li class="film" onclick="window.location.href='film6.xhtml'" style="cursor:pointer;">
+                            <img src="poster/poster6.jpg" alt="The Fly" />
+                            <h4>The Fly</h4>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer">
+                    <p>&copy; 2025 Recensioni Cinematografiche</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

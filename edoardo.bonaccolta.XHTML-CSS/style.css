@@ -1,0 +1,164 @@
+/* Importa la libreria 98.css */
+@import url('https://unpkg.com/98.css');
+
+/* Stile generale */
+body {
+    background-color: #c0c0c0;
+    font-family: 'MS Sans Serif', sans-serif;
+}
+
+/* Contenitore dei tab */
+.tab-container {
+    display: flex;
+    background: silver;
+    padding: 3px;
+    border: 2px outset white;
+}
+
+/* Stile dei tab */
+.tab {
+    font-size: 14px;
+    padding: 4px 10px;
+    border: 2px outset #dfdfdf;
+    background: #e0e0e0;
+    text-decoration: none;
+    color: black;
+    margin-right: 2px;
+}
+
+/* Effetto quando il tab è attivo */
+.tab.active, .tab:hover {
+    border: 2px inset #dfdfdf;
+    background: #c0c0c0;
+}
+
+/* Pulsanti in stile Windows 98 */
+button, .button {
+    font-size: 14px;
+    padding: 4px 10px;
+    border: 2px outset white;
+    background: #dfdfdf;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+button:active, .button:hover {
+    border: 2px inset white;
+    background: #c0c0c0;
+}
+
+/* Input e textarea in stile retrò */
+input, textarea {
+    border: 2px inset #dfdfdf;
+    background: white;
+    font-size: 14px;
+    padding: 3px;
+}
+
+/* Stile delle recensioni */
+.review-box {
+    border: 2px inset #dfdfdf;
+    padding: 10px;
+    background: white;
+    margin-top: 10px;
+}
+
+/* Stile della lista dei film */
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 5 colonne per riga */
+    gap: 10px; /* Distanza tra i film */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-items: center;
+}
+
+/* Stile per ogni elemento della lista */
+.film {
+    text-align: center;
+    width: 100%;
+}
+
+.film img {
+    width: 150px;
+    height: 225px; /* Dimensione poster */
+    height: auto;
+    border: 2px solid black;
+}
+
+.film h4 {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.film-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+}
+
+.film-poster img {
+    width: 230px; /* Imposta la larghezza del poster */
+    height: 345px;
+    border: 2px solid black;
+}
+
+.film-info{
+    font-size: larger;
+}
+
+.film-info h2 {
+    margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #0080FF;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-form {
+    width: 300px;
+}
+
+.field-block {
+    margin-bottom: 10px;
+}
+.full-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+.center-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.window-body input.input-long {
+    width: 280px;
+}
+
+.textarea-adapt {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.review-button {
+    margin-top: 10px;
+}
+.review-textarea {
+    margin-top: 10px;
+}
