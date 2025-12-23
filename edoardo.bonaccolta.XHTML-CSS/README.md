@@ -58,11 +58,3 @@ film1.xhtml … film6.xhtml  	→ schede film
 login.xhtml            		→ login  
 register.xhtml         		→ registrazione  
 style.css              		→ foglio di stile  
-
-6) Note sulla consegna GitHub/Classroom
-
-Una volta creato il repository GitHub, il progetto potrà essere condiviso e
-versionato. La cartella compressa contenente tutti i file e questo README va
-consegnata su Classroom.
-
-Fine del README
