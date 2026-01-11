@@ -1,5 +1,18 @@
 <?php
-require_once 'connection.php';
+require_once "dati_generali.php";
+
+// Connessione al DBMS (senza database)
+$conn = new mysqli($servername, $username, $password);
+
+if ($conn->connect_error) {
+    die("Connessione fallita: " . $conn->connect_error);
+}
+
+// Creazione database
+$conn->query("CREATE DATABASE IF NOT EXISTS $dbname");
+
+// Selezione database
+$conn->select_db($dbname);
 
 // Creare tabella utenti
 $sql_utenti = "CREATE TABLE IF NOT EXISTS utenti (

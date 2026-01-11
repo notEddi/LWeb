@@ -33,10 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Se non ci sono errori, inserisci la recensione
     if (empty($errori)) {
         $utente_id = $_SESSION['user_id'];
-        $testo = $conn->real_escape_string($testo);
         
         // Verifica se l'utente ha già recensito questo film
-        $query_check = "SELECT id FROM recensioni WHERE film_id = ? AND utente_id = ?";
+        $query_check = "SELECT id FROM " . T_RECENSIONI . " WHERE film_id = ? AND utente_id = ?";
         $stmt_check = $conn->prepare($query_check);
         $stmt_check->bind_param("ii", $film_id, $utente_id);
         $stmt_check->execute();
@@ -46,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['errore'] = "Hai già recensito questo film.";
         } else {
             // Inserisci la nuova recensione
-            $query_inserisci = "INSERT INTO recensioni (film_id, utente_id, voto, testo) VALUES (?, ?, ?, ?)";
+            $query_inserisci = "INSERT INTO " . T_RECENSIONI . " (film_id, utente_id, voto, testo) VALUES (?, ?, ?, ?)";
             $stmt_inserisci = $conn->prepare($query_inserisci);
             $stmt_inserisci->bind_param("iiis", $film_id, $utente_id, $voto, $testo);
             

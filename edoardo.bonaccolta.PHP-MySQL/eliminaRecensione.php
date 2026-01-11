@@ -18,7 +18,7 @@ $recensione_id = intval($_GET['id']);
 $utente_id = $_SESSION['user_id'];
 
 // Verifica che la recensione appartenga all'utente
-$query_check = "SELECT film_id FROM recensioni WHERE id = ? AND utente_id = ?";
+$query_check = "SELECT film_id FROM " . T_RECENSIONI . " WHERE id = ? AND utente_id = ?";
 $stmt_check = $conn->prepare($query_check);
 $stmt_check->bind_param("ii", $recensione_id, $utente_id);
 $stmt_check->execute();
@@ -35,7 +35,7 @@ $film_id = $recensione_data['film_id'];
 $stmt_check->close();
 
 // Elimina la recensione
-$query_elimina = "DELETE FROM recensioni WHERE id = ? AND utente_id = ?";
+$query_elimina = "DELETE FROM " . T_RECENSIONI . " WHERE id = ? AND utente_id = ?";
 $stmt_elimina = $conn->prepare($query_elimina);
 $stmt_elimina->bind_param("ii", $recensione_id, $utente_id);
 

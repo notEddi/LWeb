@@ -37,7 +37,7 @@ if (isset($_POST['aggiungi_film'])) {
     }
     
     if (empty($error_message)) {
-        $stmt = $conn->prepare("INSERT INTO film (titolo, regista, anno, durata, trama, poster) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO " . T_FILM . " (titolo, regista, anno, durata, trama, poster) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssiiss", $titolo, $regista, $anno, $durata, $trama, $poster_name);
         
         if ($stmt->execute()) {

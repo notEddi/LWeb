@@ -7,42 +7,51 @@ if ($is_logged) {
     exit();
 }
 
+// Inizializza variabili
 $error_message = "";
 $success_message = "";
+$username = '';
+$email = '';
 
 if (isset($_POST['registrati'])) {
-    if (empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['conferma_password'])) {
+    // Salva i valori inseriti (per favorire la persistenza delle cose corrette)
+    $username = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $password = $_POST['password'] ?? '';
+    $conferma_password = $_POST['conferma_password'] ?? '';
+
+    // Validazione campi
+    if (empty($username) || empty($email) || empty($password) || empty($conferma_password)) {
         $error_message = "<p style='color: red;'>Tutti i campi sono obbligatori!</p>";
-    } else if ($_POST['password'] !== $_POST['conferma_password']) {
+    } else if ($password !== $conferma_password) {
         $error_message = "<p style='color: red;'>Le password non coincidono!</p>";
     } else {
-        $username = trim($_POST['username']);
-        $email = trim($_POST['email']);
-        $password = trim($_POST['password']);
-        
-        // Verificare se l'utente esiste già
-        $stmt = $conn->prepare("SELECT id FROM utenti WHERE username = ? OR email = ?");
+        // Controllo se l'utente esiste già
+        $stmt = $conn->prepare("SELECT id FROM " . T_UTENTI . " WHERE username = ? OR email = ?");
         $stmt->bind_param("ss", $username, $email);
         $stmt->execute();
         $result = $stmt->get_result();
-        
+
         if ($result->num_rows > 0) {
             $error_message = "<p style='color: red;'>Username o email già esistenti!</p>";
         } else {
             // Hash della password
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            
-            // Inserire il nuovo utente
-            $stmt = $conn->prepare("INSERT INTO utenti (username, email, password) VALUES (?, ?, ?)");
+
+            // Inserimento nuovo utente
+            $stmt = $conn->prepare("INSERT INTO " . T_UTENTI . " (username, email, password) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $username, $email, $hashed_password);
-            
+
             if ($stmt->execute()) {
                 $success_message = "<p style='color: green;'>Registrazione completata! <a href='login.php'>Accedi ora</a></p>";
+                // Pulisce i valori della form dopo il successo
+                $username = '';
+                $email = '';
             } else {
                 $error_message = "<p style='color: red;'>Errore durante la registrazione: " . $conn->error . "</p>";
             }
         }
-        
+
         $stmt->close();
     }
 }
@@ -78,12 +87,12 @@ if (isset($_POST['registrati'])) {
                         <form action="register.php" method="post">
                             <div class="field-row-stacked">
                                 <label for="username">Username:</label>
-                                <input type="text" id="username" name="username" required>
+                                <input type="text" id="username" name="username" required value="<?= htmlspecialchars($username) ?>">
                             </div>
                             
                             <div class="field-row-stacked" style="margin-top: 10px;">
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required value="<?= htmlspecialchars($email) ?>">
                             </div>
                             
                             <div class="field-row-stacked" style="margin-top: 10px;">

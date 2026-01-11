@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if ($film_id > 0) {
         // Rimuovi dalla watchlist
-        $query_rimuovi = "DELETE FROM watchlist WHERE id_utente = ? AND id_film = ?";
+        $query_rimuovi = "DELETE FROM " . T_WATCHLIST . " WHERE id_utente = ? AND id_film = ?";
         $stmt_rimuovi = $conn->prepare($query_rimuovi);
         $stmt_rimuovi->bind_param("ii", $utente_id, $film_id);
         

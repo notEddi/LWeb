@@ -15,7 +15,7 @@ if (isset($_POST['elimina_film'])) {
     $film_id = intval($_POST['film_id']);
     
     // Prima otteniamo il nome del poster per eliminare il file
-    $stmt_poster = $conn->prepare("SELECT poster FROM film WHERE id = ?");
+    $stmt_poster = $conn->prepare("SELECT poster FROM " . T_FILM . " WHERE id = ?");
     $stmt_poster->bind_param("i", $film_id);
     $stmt_poster->execute();
     $result_poster = $stmt_poster->get_result();
@@ -23,7 +23,7 @@ if (isset($_POST['elimina_film'])) {
     $stmt_poster->close();
     
     // Elimina il film (le recensioni e watchlist verranno eliminate in cascade)
-    $stmt = $conn->prepare("DELETE FROM film WHERE id = ?");
+    $stmt = $conn->prepare("DELETE FROM " . T_FILM . " WHERE id = ?");
     $stmt->bind_param("i", $film_id);
     
     if ($stmt->execute()) {
@@ -45,9 +45,9 @@ if (isset($_POST['elimina_film'])) {
 $query_film = "SELECT f.*, 
                COUNT(r.id) as numero_recensioni,
                COUNT(w.id) as in_watchlist
-               FROM film f 
-               LEFT JOIN recensioni r ON f.id = r.film_id 
-               LEFT JOIN watchlist w ON f.id = w.id_film 
+               FROM " . T_FILM . " f 
+               LEFT JOIN " . T_RECENSIONI . " r ON f.id = r.film_id 
+               LEFT JOIN " . T_WATCHLIST . " w ON f.id = w.id_film 
                GROUP BY f.id 
                ORDER BY f.id DESC";
 $result_film = $conn->query($query_film);

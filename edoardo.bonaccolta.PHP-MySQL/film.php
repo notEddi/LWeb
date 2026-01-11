@@ -10,7 +10,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 $film_id = intval($_GET['id']);
 
 // Query per ottenere i dettagli del film
-$query_film = "SELECT * FROM film WHERE id = ?";
+$query_film = "SELECT * FROM " . T_FILM . " WHERE id = ?";
 $stmt = $conn->prepare($query_film);
 $stmt->bind_param("i", $film_id);
 $stmt->execute();
@@ -27,8 +27,8 @@ $stmt->close();
 
 // Query per ottenere le recensioni del film
 $query_recensioni = "SELECT r.*, u.username 
-                     FROM recensioni r 
-                     JOIN utenti u ON r.utente_id = u.id 
+                     FROM " . T_RECENSIONI . " r 
+                     JOIN " . T_UTENTI . " u ON r.utente_id = u.id 
                      WHERE r.film_id = ? 
                      ORDER BY r.data_recensione DESC";
 $stmt_recensioni = $conn->prepare($query_recensioni);
@@ -38,7 +38,7 @@ $result_recensioni = $stmt_recensioni->get_result();
 
 // Calcola la media dei voti
 $query_media = "SELECT AVG(voto) as media_voti, COUNT(*) as totale_recensioni 
-                FROM recensioni 
+                FROM " . T_RECENSIONI . " 
                 WHERE film_id = ?";
 $stmt_media = $conn->prepare($query_media);
 $stmt_media->bind_param("i", $film_id);
@@ -86,7 +86,7 @@ $stelle = str_repeat('⭐', round($media_voti));
                     <?php if (isset($_SESSION['user_id'])): ?>
         <?php
         // Verifica se il film è già nella watchlist
-        $query_check_watchlist = "SELECT id FROM watchlist WHERE id_utente = ? AND id_film = ?";
+        $query_check_watchlist = "SELECT id FROM " . T_WATCHLIST . " WHERE id_utente = ? AND id_film = ?";
         $stmt_check_watchlist = $conn->prepare($query_check_watchlist);
         $stmt_check_watchlist->bind_param("ii", $_SESSION['user_id'], $film_id);
         $stmt_check_watchlist->execute();

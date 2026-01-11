@@ -13,7 +13,7 @@ if ($is_logged) {
     
     // Controlla se è admin (solo se non l'abbiamo già fatto in questa sessione)
     if (!isset($_SESSION['is_admin'])) {
-        $stmt = $conn->prepare("SELECT is_admin FROM utenti WHERE id = ?");
+        $stmt = $conn->prepare("SELECT is_admin FROM " . T_UTENTI . " WHERE id = ?");
         $stmt->bind_param("i", $_SESSION['user_id']);
         $stmt->execute();
         $result = $stmt->get_result();

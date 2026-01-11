@@ -24,8 +24,8 @@ require_once 'config.php';
                 // Query per ottenere tutti i film con informazioni sulle recensioni, ordinati per ID
                 $query = "SELECT f.id, f.titolo, f.regista, f.anno, f.durata, f.poster,
                          AVG(r.voto) as media_voti, COUNT(r.id) as numero_recensioni
-                         FROM film f 
-                         LEFT JOIN recensioni r ON f.id = r.film_id 
+                         FROM " . T_FILM . " f 
+                         LEFT JOIN " . T_RECENSIONI . " r ON f.id = r.film_id 
                          GROUP BY f.id 
                          ORDER BY f.id ASC"; // Ordinati per ID
                 

@@ -19,8 +19,8 @@ $utente_id = $_SESSION['user_id'];
 
 // Ottieni i dati della recensione
 $query_recensione = "SELECT r.*, f.titolo, f.id as film_id 
-                     FROM recensioni r 
-                     JOIN film f ON r.film_id = f.id 
+                     FROM " . T_RECENSIONI . " r 
+                     JOIN " . T_FILM . " f ON r.film_id = f.id 
                      WHERE r.id = ? AND r.utente_id = ?";
 $stmt = $conn->prepare($query_recensione);
 $stmt->bind_param("ii", $recensione_id, $utente_id);
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $testo = $conn->real_escape_string($testo);
         
         // Aggiorna la recensione
-        $query_aggiorna = "UPDATE recensioni SET voto = ?, testo = ?, data_recensione = NOW() WHERE id = ? AND utente_id = ?";
+        $query_aggiorna = "UPDATE " . T_RECENSIONI . " SET voto = ?, testo = ?, data_recensione = NOW() WHERE id = ? AND utente_id = ?";
         $stmt_aggiorna = $conn->prepare($query_aggiorna);
         $stmt_aggiorna->bind_param("isii", $voto, $testo, $recensione_id, $utente_id);
         

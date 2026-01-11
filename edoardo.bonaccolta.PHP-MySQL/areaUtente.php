@@ -13,7 +13,7 @@ $username = $_SESSION['username'];
 
 // Verifica se l'utente è admin
 $is_admin = false;
-$stmt_admin = $conn->prepare("SELECT is_admin FROM utenti WHERE id = ?");
+$stmt_admin = $conn->prepare("SELECT is_admin FROM " . T_UTENTI . " WHERE id = ?");
 $stmt_admin->bind_param("i", $utente_id);
 $stmt_admin->execute();
 $result_admin = $stmt_admin->get_result();
@@ -23,8 +23,8 @@ $stmt_admin->close();
 
 // Query per ottenere le recensioni dell'utente
 $query_recensioni = "SELECT r.*, f.titolo, f.anno 
-                     FROM recensioni r 
-                     JOIN film f ON r.film_id = f.id 
+                     FROM " . T_RECENSIONI . " r 
+                     JOIN " . T_FILM . " f ON r.film_id = f.id 
                      WHERE r.utente_id = ? 
                      ORDER BY r.data_recensione DESC";
 $stmt_recensioni = $conn->prepare($query_recensioni);
@@ -34,8 +34,8 @@ $result_recensioni = $stmt_recensioni->get_result();
 
 // Query per ottenere la watchlist dell'utente
 $query_watchlist = "SELECT w.*, f.titolo, f.anno, f.regista, f.poster 
-                    FROM watchlist w 
-                    JOIN film f ON w.id_film = f.id 
+                    FROM " . T_WATCHLIST . " w 
+                    JOIN " . T_FILM . " f ON w.id_film = f.id 
                     WHERE w.id_utente = ? 
                     ORDER BY w.data_aggiunta DESC";
 $stmt_watchlist = $conn->prepare($query_watchlist);
@@ -46,16 +46,16 @@ $result_watchlist = $stmt_watchlist->get_result();
 // Query per statistiche admin
 if ($is_admin) {
     $query_stats = "SELECT 
-        (SELECT COUNT(*) FROM film) as totale_film,
-        (SELECT COUNT(*) FROM utenti) as totale_utenti,
-        (SELECT COUNT(*) FROM recensioni) as totale_recensioni,
-        (SELECT COUNT(*) FROM watchlist) as totale_watchlist";
+        (SELECT COUNT(*) FROM " . T_FILM . ") as totale_film,
+        (SELECT COUNT(*) FROM " . T_UTENTI . ") as totale_utenti,
+        (SELECT COUNT(*) FROM " . T_RECENSIONI . ") as totale_recensioni,
+        (SELECT COUNT(*) FROM " . T_WATCHLIST . ") as totale_watchlist";
     
     $result_stats = $conn->query($query_stats);
     $stats = $result_stats->fetch_assoc();
     
     // Ultimi film aggiunti
-    $query_ultimi_film = "SELECT * FROM film ORDER BY id DESC LIMIT 5";
+    $query_ultimi_film = "SELECT * FROM " . T_FILM . " ORDER BY id DESC LIMIT 5";
     $result_ultimi_film = $conn->query($query_ultimi_film);
 }
 ?>
