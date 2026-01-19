@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<film_collection>
+  <film id="1">
+    <titolo>Pulp Fiction</titolo>
+    <regista>Quentin Tarantino</regista>
+    <anno>1994</anno>
+    <durata>154</durata>
+    <trama>Le vicende di due sicari della mafia, un pugile, la moglie di un gangster e due banditi di diner si intrecciano in quattro storie di violenza e redenzione.</trama>
+    <poster>poster1.jpg</poster>
+  </film>
+  <film id="2">
+    <titolo>Seven</titolo>
+    <regista>David Fincher</regista>
+    <anno>1995</anno>
+    <durata>127</durata>
+    <trama>Due detective, un esordiente e un veterano, cacciano un serial killer che usa i sette peccati capitali come motivazioni.</trama>
+    <poster>poster2.jpg</poster>
+  </film>
+  <film id="3">
+    <titolo>Memories of Murder</titolo>
+    <regista>Bong Joon Ho</regista>
+    <anno>2003</anno>
+    <durata>131</durata>
+    <trama>Nel 1986 in una piccola provincia coreana, tre investigatori lavorano sul caso di diverse donne vittime di stupro e omicidio da un colpevole sconosciuto.</trama>
+    <poster>poster3.jpg</poster>
+  </film>
+  <film id="4">
+    <titolo>Oppenheimer</titolo>
+    <regista>Christopher Nolan</regista>
+    <anno>2023</anno>
+    <durata>181</durata>
+    <trama>La storia del ruolo di J. Robert Oppenheimer nello sviluppo della bomba atomica durante la seconda guerra mondiale.</trama>
+    <poster>poster4.jpg</poster>
+  </film>
+  <film id="5">
+    <titolo>The Matrix</titolo>
+    <regista>Wachowski</regista>
+    <anno>1999</anno>
+    <durata>136</durata>
+    <trama>Ambientato nel 22° secolo, Matrix racconta la storia di un hacker che si unisce a un gruppo di ribelli clandestini che combattono i grandi e potenti computer che ora governano la Terra.</trama>
+    <poster>poster5.jpg</poster>
+  </film>
+  <film id="6">
+    <titolo>The Fly</titolo>
+    <regista>David Cronenberg</regista>
+    <anno>1986</anno>
+    <durata>96</durata>
+    <trama>Uno scienziato brillante ed eccentrico comincia a trasformarsi in una mostruosa creature metà uomo e metà mosca dopo che uno dei suoi esperimenti è andato storto.</trama>
+    <poster>poster6.jpg</poster>
+  </film>
+  <film id="7">
+    <titolo>Oldboy</titolo>
+    <regista>Park Chan-wook</regista>
+    <anno>2003</anno>
+    <durata>120</durata>
+    <trama>Senza avere idea di come sia finito in prigione, drogato e torturato per 15 anni, un uomo disperato cerca vendetta sui suoi rapitori.</trama>
+    <poster>poster7.jpg</poster>
+  </film>
+  <film id="8">
+    <titolo>Mulholland Drive</titolo>
+    <regista>David Lynch</regista>
+    <anno>2001</anno>
+    <durata>147</durata>
+    <trama>Dopo aver perso la memoria in un incidente sulla strada Mullholland Drive, una donna ed un'aspirante attrice cercano indizi e rispose a Los Angeles in un'intricata avventura che oscilla tra sogno e realtà.</trama>
+    <poster>poster8.jpg</poster>
+  </film>
+  <film id="9">
+    <titolo>The Shining</titolo>
+    <regista>Stanley Kubrick</regista>
+    <anno>1980</anno>
+    <durata>144</durata>
+    <trama>Una famiglia si dirige verso un hotel isolato per l'inverno, dove una presenza spirituale malvagia induce il padre alla violenza, mentre il figlio telepatico vede orribili presentimenti del passato e del futuro.</trama>
+    <poster>poster9.jpg</poster>
+  </film>
+  <film id="10">
+    <titolo>Le Cercle Rouge</titolo>
+    <regista>Jean-Pierre Melville</regista>
+    <anno>1970</anno>
+    <durata>140</durata>
+    <trama>Dopo aver lasciato la prigione, il maestro ladro Corey incontra un famigerato evaso e un ex poliziotto alcolizzato. Il trio procede alla trama di un'elaborata rapina.</trama>
+    <poster>poster10.jpg</poster>
+  </film>
+  <film id="11">
+    <titolo>Spirited Away</titolo>
+    <regista>Hayao Miyazaki</regista>
+    <anno>2001</anno>
+    <durata>125</durata>
+    <trama>Una ragazzina, Chihiro, rimane intrappolata in uno strano, nuovo mondo di spiriti. Quando i suoi genitori subiscono una misteriosa trasformazione, deve fare appello al coraggio che non sapeva di avere per liberare la sua famiglia.</trama>
+    <poster>poster11.jpg</poster>
+  </film>
+  <film id="12">
+    <titolo>Avatar</titolo>
+    <regista>James Cameron</regista>
+    <anno>2009</anno>
+    <durata>162</durata>
+    <trama>Nel 22° secolo, un marine paraplegico viene inviato sulla luna Pandora per una missione unica, ma è combattuto tra l'esecuzione degli ordini e la protezione di una civiltà aliena.</trama>
+    <poster>poster12.jpg</poster>
+  </film>
+</film_collection>
