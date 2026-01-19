@@ -1,0 +1,39 @@
+.film-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+.film-card {
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: white;
+}
+.film-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.film-info {
+    flex-grow: 1;
+}
+.film-poster-small {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    margin-left: 15px;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 12px;
+}
+.stat-item {
+    background: #e0e0e0;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+}
